@@ -16,10 +16,10 @@ function App() {
       const coffees = useLoaderData({coffee});
 
   return (
-    <div>
-      <h1 className='text-6xl text-purple-600'>Hot cold coffee {coffees.length}</h1>
+    <div className='m-20 '>
+      <h1 className='text-6xl text-white mb-7' >Our Popular Products</h1>
     
-    <div>
+    <div className='grid grid-cols-2 gap-4'>
     {
       coffee?.map (coffee => <CoffeeCard key={coffee} coffee={coffee}></CoffeeCard>)
      }

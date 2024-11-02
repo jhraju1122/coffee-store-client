@@ -5,14 +5,14 @@ const AddCoffee = () => {
     const handleAddCoffee = event =>{
        event.preventDefault();
        const form = event.target;
-       const coffee = form.coffee.value;
+       const  name = form.name.value;
        const quantity = form.quantity.value;
        const chef = form.chef.value;
        const details = form.details.value;
        const teste = form.teste.value;
        const Category = form.Category.value;
        const photo = form.photo.value;
-       const newCoffee = {coffee, quantity, chef, details, teste, Category, photo};
+       const newCoffee = {name, quantity, chef, details, teste, Category, photo};
        console.log(newCoffee);
 
       //  send data to the server
@@ -47,7 +47,7 @@ const AddCoffee = () => {
             {/* form name and Quantity row  */}
          <div className="md:flex w-[100%] justify-center mb-3 gap-3">
          <div className="input input-bordered flex items-center gap-2 md:w-1/2">
-         <input type="text" className="grow" name="coffee" placeholder="Coffee Name" />
+         <input type="text" className="grow" name="name" placeholder="Coffee Name" />
          </div>
          <div className="input input-bordered flex items-center gap-2 md:w-1/2">
          <input type="text" className="grow" name="quantity" placeholder="Available Quantity" />
@@ -75,8 +75,7 @@ const AddCoffee = () => {
          <input type="text" className="grow text-center" name="photo"  placeholder="Photo Url" />
          </div >
 
-
-            <button className="btn mt-5 w-full">Add Coffee</button>
+             <button className="btn mt-5 w-full">Add Coffee</button>
          </form>
         </div>
     );
